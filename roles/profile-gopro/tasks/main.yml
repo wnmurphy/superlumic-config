@@ -1,0 +1,39 @@
+---
+- name: install cask applications for all users
+  homebrew_cask: name={{item}} state=present
+  with_items:
+    - hipchat
+    - google-drive
+    - keepingyouawake
+    - boot2docker
+    - firefox
+    - iterm2
+    - mou
+    - sublime-text
+    - shiftit
+
+- name: install developer brew applications
+  homebrew: name={{item}} state=latest
+  with_items:
+    - brew-cask
+    - cassandra
+    - elasticsearch
+    - git
+    - node
+    - nginx-full
+    - postgresql
+    - redis
+    - rhino
+    - selenium-server-standalone
+
+- name: download gvm
+  get_url:
+    url: https://raw.githubusercontent.com/moovweb/gvm/master/binscripts/gvm-installer
+    dest: /tmp/gvm-install.sh
+    mode: 0440
+- name: install gvm
+  command: /usr/local/bin/bash /tmp/gvm-install.sh
+
+- name: setting path
+  sudo: no
+  action: shell source /Users/{{ansible_user_id}}/.gvm/scripts/gvm
