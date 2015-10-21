@@ -189,7 +189,6 @@
         - generator-karma
         - generator-angular
         - generator-express-react
-        - generator-mariongulpreactify
         - generator-angular-fullstack
         - generator-cordova
         - karma
