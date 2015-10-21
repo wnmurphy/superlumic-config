@@ -32,7 +32,7 @@
     dest: /tmp/gvm-install.sh
     mode: 0440
 - name: install gvm
-  command: which gvm || /usr/bin/env bash /tmp/gvm-install.sh
+  command: command -v gvm >/dev/null 2>&1 || /usr/bin/env bash /tmp/gvm-install.sh
 
 - name: setting path
   sudo: no
