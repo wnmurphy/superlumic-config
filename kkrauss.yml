@@ -172,7 +172,7 @@
         - wxmac
         - xz
         - zeromq
-    - name: install kkrauss brew applications
+    - name: install kkrauss npm applications
       npm: name={{item}} state=latest global=yes
       with_items:
         - bower
@@ -191,12 +191,12 @@
         - generator-express-react
         - generator-mariongulpreactify
         - generator-angular-fullstack
+        - generator-cordova
         - karma
         - protractor
         - autoprefixer
         - generator-node
         - generator-react-webpack
-        - yo
         - express
         - elasticdump
         - coffee-script
@@ -211,6 +211,27 @@
     - git_user_name: Kevin
     - git_user_email: earlkrauss@gmail.com
     - sublime_packages:
+        - dest: "Alignment"
+          repo: "https://github.com/wbond/sublime_alignment.git"
+          version: "master"
+        - dest: "BeautifyRuby"
+          repo: "https://github.com/CraigWilliams/BeautifyRuby.git"
+          version: "master"
+        - dest: "Emmet"
+          repo: "https://github.com/sergeche/emmet-sublime.git"
+          version: "master"
+        - dest: "Git"
+          repo: "https://github.com/kemayo/sublime-text-git.git"
+          version: "master"
+        - dest: "Tomorrow Color Schemes"
+          repo: "https://github.com/theymaybecoders/sublime-tomorrow-theme.git"
+          version: "master"
+        - dest: "ReactJS"
+          repo: "https://github.com/reactjs/sublime-react.git"
+          version: "master"
+        - dest: "HTMLPrettify"
+          repo: "https://github.com/victorporof/Sublime-HTMLPrettify.git"
+          version: "master"
         - dest: "SideBarEnhancements"
           repo: "https://github.com/titoBouzout/SideBarEnhancements"
           version: "st3"
@@ -235,8 +256,8 @@
         - dest: "Ansible"
           repo: "https://github.com/clifford-github/sublime-ansible.git"
           version: "master"
-    - sublime_text_color_scheme: "Packages/Base16/base16-eighties.dark.tmTheme"
-    - sublime_text_theme: "Soda Dark 3.sublime-theme"
+    - sublime_text_color_scheme: "Packages/Tomorrow Color Schemes/Tomorrow.tmTheme"
+    - sublime_text_theme: "Soda Light.sublime-theme"
     - osx_defaults:
       - domain: 'com.apple.dock'
         key: 'autohide'
