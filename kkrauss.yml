@@ -26,7 +26,6 @@
         - fluid
         - gimp
         - github
-        - gitx-rowanj
         - handbrake
         - hedgewars
         - hex-fiend
@@ -38,7 +37,8 @@
         - mou
         - openoffice
         - opera
-        - pandora-one
+        - pandora
+        - rowanj-gitx
         - seashore
         - sequel-pro
         - seil
@@ -46,7 +46,7 @@
         - soundflower
         - sourcetree
         - spotify
-        - sqlite-database-browser
+        - sqlitebrowser
         - steam
         - sublime-text
         - skype
