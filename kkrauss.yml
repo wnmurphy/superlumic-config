@@ -175,32 +175,27 @@
     - name: install kkrauss npm applications
       npm: name={{item}} state=latest global=yes
       with_items:
+        - autoprefixer
         - bower
+        - express
         - grunt
-        - yo
-        - readable-stream
-        - phantomjs
-        - ngrok
-        - ios-sim
-        - jasmine-node
         - gulp
         - grunt-cli
+        - generator-angular
+        - generator-cordova
+        - generator-express-react
         - generator-reactjs
         - generator-karma
-        - generator-angular
-        - generator-express-react
-        - generator-angular-fullstack
-        - generator-cordova
-        - karma
-        - protractor
-        - autoprefixer
         - generator-node
         - generator-react-webpack
-        - express
-        - elasticdump
-        - coffee-script
-        - browserify
-        - backbone
+        - jasmine-node
+        - karma
+        - ngrok
+        - ios-sim
+        - phantomjs
+        - protractor
+        - readable-stream
+        - yo
 
   roles:
     - profile-gopro
