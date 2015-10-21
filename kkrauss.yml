@@ -173,7 +173,7 @@
         - xz
         - zeromq
     - name: install kkrauss brew applications
-      npm: name={{item}} state=latest
+      npm: name={{item}} state=latest global=yes
       with_items:
         - bower
         - grunt
