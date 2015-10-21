@@ -126,7 +126,6 @@
         - lua
         - lzip
         - mad
-        - meld
         - memcached
         - mercurial
         - mongodb
