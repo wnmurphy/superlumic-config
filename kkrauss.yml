@@ -185,11 +185,11 @@
         - generator-cordova
         - generator-express-react
         - generator-reactjs
-        - generator-karma
         - generator-node
         - generator-react-webpack
         - jasmine-node
         - karma
+        - mocha
         - ngrok
         - ios-sim
         - phantomjs
