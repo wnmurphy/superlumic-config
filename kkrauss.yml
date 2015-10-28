@@ -15,7 +15,7 @@
         - audacity
         - adobe-air
         - blender
-        - boot2docker
+        - dockertoolbox
         - caffeine
         - chefdk
         - chromium
@@ -27,6 +27,8 @@
         - fluid
         - gimp
         - github
+        - google-chrome-canary
+        - google-chrome
         - handbrake
         - hedgewars
         - hex-fiend
@@ -40,6 +42,7 @@
         - opera
         - pandora
         - rowanj-gitx
+        - slack
         - seashore
         - sequel-pro
         - seil

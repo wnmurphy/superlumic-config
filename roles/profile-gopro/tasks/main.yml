@@ -5,7 +5,7 @@
     - hipchat
     - google-drive
     - keepingyouawake
-    - boot2docker
+    - dockertoolbox
     - firefox
     - iterm2
     - mou
