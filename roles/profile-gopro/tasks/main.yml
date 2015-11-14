@@ -1,5 +1,6 @@
 ---
 - name: install cask applications for all users
+  when: ansible_distribution == 'MacOSX'
   homebrew_cask: name={{item}} state=present
   with_items:
     - hipchat
@@ -13,6 +14,7 @@
     - shiftit
 
 - name: install developer brew applications
+  when: ansible_distribution == 'MacOSX'
   homebrew: name={{item}} state=latest
   with_items:
     - brew-cask
