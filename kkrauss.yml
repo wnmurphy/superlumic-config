@@ -5,6 +5,7 @@
 
   tasks:
     - name: install personal cask applications
+      when: ansible_distribution == 'MacOSX'
       homebrew_cask: name={{item}} state=present
       with_items:
         - xquartz
@@ -61,6 +62,7 @@
         - vlc
         - wireshark
     - name: install kkrauss brew applications
+      when: ansible_distribution == 'MacOSX'
       homebrew: name={{item}} state=latest
       with_items:
         - android-sdk
@@ -165,9 +167,7 @@
         - shmux
         - sox
         - sqlite
-        - squid
         - tmux
-        - tokyo-cabinet
         - tree
         - typesafe-activator
         - unixodbc
@@ -200,6 +200,76 @@
         - protractor
         - readable-stream
         - yo
+    - name: install kkrauss apt=get applications
+      when: ansible_distribution == 'Ubuntu'
+      apt: name={{item}} state=latest upgrade=yes
+      sudo: yes
+      with_items:
+        - android-sdk
+        - ant
+        - arping
+        - atk
+        - autoconf
+        - automake
+        - cassandra
+        - cmake
+        - coreutils
+        - ddrescue
+        - elasticsearch
+        - elixir
+        - erlang
+        - findutils
+        - fontconfig
+        - fping
+        - gawk
+        - gdbm
+        - gdk-pixbuf
+        - geoip
+        - git
+        - git-extras
+        - git-flow
+        - giter8
+        - glib
+        - gmp
+        - gnutls
+        - gtk+
+        - gtksourceview
+        - htop
+        - hub
+        - imagemagick
+        - jmeter
+        - jpeg
+        - lame
+        - leiningen
+        - lftp
+        - lua
+        - lzip
+        - mad
+        - memcached
+        - mercurial
+        - mongodb
+        - mutt
+        - nettle
+        - nginx-full
+        - node
+        - openssl
+        - ossp-uuid
+        - pango
+        - pbzip2
+        - postgresql
+        - pstree
+        - pv
+        - redis
+        - sbt
+        - scala
+        - selenium-server-standalone
+        - shmux
+        - sox
+        - sqlite
+        - tmux
+        - watch
+        - wget
+        - zeromq
 
   roles:
     - profile-gopro
