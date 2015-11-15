@@ -203,7 +203,7 @@
         - yo
     - name: install kkrauss apt=get applications
       when: ansible_distribution == 'Ubuntu'
-      apt: name={{item}} state=latest upgrade=yes
+      apt: name={{item}} state=latest
       sudo: yes
       with_items:
         - android-sdk
