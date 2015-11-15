@@ -29,13 +29,16 @@
     - selenium-server-standalone
 
 - name: download gvm
+  when: ansible_distribution == 'MacOSX'
   get_url:
     url: https://raw.githubusercontent.com/moovweb/gvm/master/binscripts/gvm-installer
     dest: /tmp/gvm-install.sh
     mode: 0440
 - name: install gvm
+  when: ansible_distribution == 'MacOSX'
   command: command -v gvm >/dev/null 2>&1 || /usr/bin/env bash /tmp/gvm-install.sh
 
 - name: setting path
+  when: ansible_distribution == 'MacOSX'
   sudo: no
   action: shell source /Users/{{ansible_user_id}}/.gvm/scripts/gvm
