@@ -201,23 +201,17 @@
         - protractor
         - readable-stream
         - yo
-    - name: install kkrauss apt=get applications
+    - name: install kkrauss apt-get applications
       when: ansible_distribution == 'Ubuntu'
       apt: name={{item}} state=latest
       sudo: yes
       with_items:
         - ant
         - arping
-        - atk
         - autoconf
         - automake
-        - cassandra
         - cmake
         - coreutils
-        - ddrescue
-        - elasticsearch
-        - elixir
-        - erlang
         - findutils
         - fontconfig
         - fping
