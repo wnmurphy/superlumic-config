@@ -177,6 +177,7 @@
         - xz
         - zeromq
     - name: install kkrauss npm applications
+      when: ansible_distribution == 'MacOSX'
       npm: name={{item}} state=latest global=yes
       with_items:
         - autoprefixer
