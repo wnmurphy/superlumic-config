@@ -206,7 +206,6 @@
       apt: name={{item}} state=latest
       sudo: yes
       with_items:
-        - android-sdk
         - ant
         - arping
         - atk
