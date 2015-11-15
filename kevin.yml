@@ -219,7 +219,6 @@
         - git
         - git-extras
         - git-flow
-        - glib
         - gmp
         - gnutls
         - gtk+
