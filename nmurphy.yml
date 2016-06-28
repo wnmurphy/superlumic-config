@@ -29,11 +29,9 @@
         - gimp
         - github
         - google-chrome-canary
-        - google-chrome
         - handbrake
         - hedgewars
         - hex-fiend
-        - hipchat
         - iterm2
         - kismac
         - macfusion
@@ -53,15 +51,13 @@
         - spotify
         - sqlitebrowser
         - steam
-        - sublime-text
-        - skype
         - textmate
         - the-unarchiver
         - transmission
         - unrarx
         - vlc
         - wireshark
-    - name: install kkrauss brew applications
+    - name: install nmurphy brew applications
       when: ansible_distribution == 'MacOSX'
       homebrew: name={{item}} state=latest
       with_items:
@@ -176,7 +172,8 @@
         - wxmac
         - xz
         - zeromq
-    - name: install kkrauss npm applications
+    - name: install nmurphy npm applications
+      when: ansible_distribution == 'MacOSX'
       npm: name={{item}} state=latest global=yes
       with_items:
         - autoprefixer
@@ -200,43 +197,30 @@
         - protractor
         - readable-stream
         - yo
-    - name: install kkrauss apt=get applications
+    - name: install nmurphy apt-get applications
       when: ansible_distribution == 'Ubuntu'
-      apt: name={{item}} state=latest upgrade=yes
+      apt: name={{item}} state=latest
       sudo: yes
       with_items:
-        - android-sdk
         - ant
         - arping
-        - atk
         - autoconf
         - automake
-        - cassandra
         - cmake
         - coreutils
-        - ddrescue
-        - elasticsearch
-        - elixir
-        - erlang
         - findutils
         - fontconfig
         - fping
         - gawk
-        - gdbm
-        - gdk-pixbuf
-        - geoip
         - git
         - git-extras
         - git-flow
-        - giter8
-        - glib
         - gmp
         - gnutls
         - gtk+
         - gtksourceview
         - htop
         - hub
-        - imagemagick
         - jmeter
         - jpeg
         - lame
@@ -276,8 +260,8 @@
 
   vars:
     - computername: mbr-27484
-    - git_user_name: Kevin
-    - git_user_email: earlkrauss@gmail.com
+    - git_user_name: wnmurphy
+    - git_user_email: wnmurphy@gmail.com
     - sublime_packages:
         - dest: "Alignment"
           repo: "https://github.com/wbond/sublime_alignment.git"
@@ -294,6 +278,9 @@
         - dest: "Tomorrow Color Schemes"
           repo: "https://github.com/theymaybecoders/sublime-tomorrow-theme.git"
           version: "master"
+        - dest: "Theme - Afterglow"
+          repo: "https://github.com/YabataDesign/afterglow-theme"
+          version: "master"
         - dest: "ReactJS"
           repo: "https://github.com/reactjs/sublime-react.git"
           version: "master"
@@ -309,9 +296,6 @@
         - dest: "BracketHighlighter"
           repo: "https://github.com/facelessuser/BracketHighlighter.git"
           version: "master"
-        - dest: "Theme - Soda"
-          repo: "https://github.com/buymeasoda/soda-theme.git"
-          version: "master"
         - dest: "Base16"
           repo: "https://github.com/chriskempson/base16-textmate.git"
           version: "master"
@@ -324,8 +308,7 @@
         - dest: "Ansible"
           repo: "https://github.com/clifford-github/sublime-ansible.git"
           version: "master"
-    - sublime_text_color_scheme: "Packages/Tomorrow Color Schemes/Tomorrow.tmTheme"
-    - sublime_text_theme: "Soda Light.sublime-theme"
+    - sublime_text_color_scheme: "Packages/Theme - Afterglow/Afterglow-twilight.tmTheme"
     - osx_defaults:
       - domain: 'com.apple.dock'
         key: 'autohide'
